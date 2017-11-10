@@ -1,0 +1,13 @@
+# Legacy
+aodh:
+  name: Alarming
+  versions:
+    - v2: "http://docs.openstack.org/developer/aodh/webapi/v2.html"
+ceilometer:
+  name: Metering
+  versions:
+    - v2: "http://docs.openstack.org/developer/ceilometer/webapi/v2.html"
+cinder:
+  name: Block storage
+  versions:
+    - v1: "https://developer.openstack.org/api-ref/block-storage/v1/?expanded=show-quota-details-for-user-v1-detail,show-default-quotas-detail,show-quotas-v1-detail,update-quotas-v1-detail,delete-quotas-v1-detail,show-quotas-for-user-v1-detail,update-quotas-for-user-v1-detail,delete-quotas-for-user-v1-detail,show-snapshot-details-v1-detail,delete-snapshot-v1-detail,list-snapshots-with-details-v1-detail,create-snapshot-v1-detail,list-snapshots-v1-detail,show-snapshot-metadata-v1-detail,update-snapshot-metadata-v1-detail,list-volume-types-v1-detail,create-volume-type-v1-detail,update-volume-type-v1-detail,update-extra-specs-for-a-volume-type-v1-detail,show-volume-type-details-v1-detail,delete-volume-type-v1-detail,show-api-v1-details-detail,list-api-versions-v1-detail,list-volumes-with-details-v1-detail,create-volume-v1-detail,list-volumes-v1-detail,show-volume-details-v1-detail,delete-volume-v1-detailhttps://developer.openstack.org/api-ref/block-storage/v1/?expanded=show-quota-details-for-user-v1-detail,show-default-quotas-detail,show-quotas-v1-detail,update-quotas-v1-detail,delete-quotas-v1-detail,show-quotas-for-user-v1-detail,update-quotas-for-user-v1-detail,delete-quotas-for-user-v1-detail,show-snapshot-details-v1-detail,delete-snapshot-v1-detail,list-snapshots-with-details-v1-detail,create-snapshot-v1-detail,list-snapshots-v1-detail,show-snapshot-metadata-v1-detail,update-snapshot-metadata-v1-detail,list-volume-types-v1-detail,create-volume-type-v1-detail,update-volume-type-v1-detail,update-extra-specs-for-a-volume-type-v1-detail,show-volume-type-details-v1-detail,delete-volume-type-v1-detail,show-api-v1-details-detail,list-api-versions-v1-detail,list-volumes-with-details-v1-detail,create-volume-v1-detail,list-volumes-v1-detail,show-volume-details-v1-detail,delete-volume-v1-detail"
