@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require './lib/openstack_apis/services'
+
+API_REF = 'API-ref.yaml'
+BASE = 'APIs'
+
+def usage
+  puts "#{__FILE__} [ -m <module name> | -d ]"
+end
+
+modules = []
+until ARGV.empty?
+  case ARGV[0]
+  when '-m', '--module='
+    modules << ARGV[1]
+    ARGV.shift(2)
+  when '-d', '--debug'
+    $DEBUG = true
+    ARGV.shift
+  else
+    usage & exit
+  end
+end
+
+services = OpenStackAPIs::Services.new(API_REF)
+services.include_only(modules) unless modules.empty?
+services.fetch

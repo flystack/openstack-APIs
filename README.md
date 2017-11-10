@@ -1,1 +1,4 @@
 # openstack-APIs
+
+## Run
+```./fetch
