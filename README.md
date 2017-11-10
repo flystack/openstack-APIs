@@ -1,4 +1,3 @@
 # openstack-APIs
 
-## Run
-```./fetch
+## To regenerate APIs schema from reference, run `./fetch`
