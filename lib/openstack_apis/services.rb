@@ -1,16 +1,6 @@
-require 'yaml'
+require './lib/openstack_apis/service'
 
 module OpenStackAPIs
-  class Service
-    require './lib/openstack_apis/webcrawler'
-    include OpenStackAPIs::Webcrawler
-
-    attr_reader :name, :desc, :parser, :version, :url
-    def initialize(name, desc, parser, version, url)
-      @name, @desc, @parser, @version, @url = name, desc, parser, version, url
-    end
-  end
-
   class Services
     include Enumerable
 
@@ -21,7 +11,7 @@ module OpenStackAPIs
       ref.each do |project, details|
         details["versions"].each do |version|
           version.each do |version_key, url|
-            @services << Service.new(project, details["name"], :api_ref,  version_key, url)
+            @services << OpenStackAPIs::Service.new(project, details["name"], :api_ref,  version_key, url)
           end
         end
       end
@@ -31,8 +21,15 @@ module OpenStackAPIs
       @services = @services.select { |service| list.include?(service.name) }
     end
 
-    def fetch
-      @services.each { |service| service.fetch }
+
+    def fetch(base)
+      @services.each do |service|
+        project_path = "#{base}/#{service.name}"
+        target = "#{project_path}/#{service.version}.yaml"
+        Dir.mkdir(project_path) unless Dir.exist?(project_path)
+        puts "Fetching #{service.name} -> #{service.version}"
+        File.write(target, service.fetch.to_yaml)
+      end
     end
 
     def each
