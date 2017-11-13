@@ -1,10 +1,10 @@
 # openstack-APIs
 
-Every normalized OpenStack project's API is documented and referenced by the [API guide](https://developer.openstack.org/api-guide/quick-start/index.html). This has provided the opportunity to get OpenStack APIs schemas for SDKs consumption.
+Every normalized OpenStack project's API is documented and referenced by the [API guide](https://developer.openstack.org/api-guide/quick-start/index.html). This has provided the opportunity to get OpenStack APIs schema for SDKs consumption.
 
 On the long run the schema to reside respective Openstack project source repos.
 
-## To regenerate API(s) schema(s)
+## To regenerate API(s) schema
 The APIs schema can be regenerated from their respective API reference using the command:  
 `./fetch`
 
