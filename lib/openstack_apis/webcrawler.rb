@@ -3,19 +3,6 @@ require 'open-uri'
 
 module OpenStackAPIs
   module Webcrawler
-    def fetch
-      return if @url.empty?
-      project = (@name[0].upcase + @name[1..-1]).to_sym
-      puts "#{project}-#{@version}"
-      html_source = fetch_source(@url)
-      api = self.send(@parser, html_source)
-      target = BASE + '/' + service_path + ".yaml"
-      Dir.mkdir(BASE + '/' + "#{@name}") unless Dir.exist?(BASE + '/' + "#{@name}")
-      File.write(target, api.to_yaml)
-    end
-
-    private
-
     def add_method_name(verb, path)
       if elements?(path)
         subpath = /(.*)(\{.*\})(.*)/.match(path)
@@ -109,15 +96,6 @@ module OpenStackAPIs
 
     def elements?(path)
       return true if path =~ /(.*)(\{.*\})(.*)/
-    end
-
-    def fetch_source(url)
-      raise Error, "No URL source" if url.empty?
-      return Nokogiri::HTML(open(url))
-    end
-
-    def service_path
-      "#{@name}/#{@name}_#{@version}"
     end
   end
 end

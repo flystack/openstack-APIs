@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 require './lib/openstack_apis/services'
 
-API_REF = 'API-ref.yaml'
-BASE = 'APIs'
+API_REF = './API-ref.yaml'
+BASE = './APIs'
 
 def usage
   puts "#{__FILE__} [ -m <module name> | -d ]"
@@ -24,4 +24,4 @@ end
 
 services = OpenStackAPIs::Services.new(API_REF)
 services.include_only(modules) unless modules.empty?
-services.fetch
+services.fetch(BASE)
