@@ -21,14 +21,14 @@ module OpenStackAPIs
       @services = @services.select { |service| list.include?(service.name) }
     end
 
-
     def fetch(base)
       @services.each do |service|
         project_path = "#{base}/#{service.name}"
         target = "#{project_path}/#{service.version}.yaml"
         Dir.mkdir(project_path) unless Dir.exist?(project_path)
-        puts "Fetching #{service.name} -> #{service.version}"
-        File.write(target, service.fetch.to_yaml)
+        payload = service.fetch
+        puts "Fetched: #{payload[:tag]} - #{service.name.capitalize} #{service.version}"
+        File.write(target, payload.to_yaml)
       end
     end
 

@@ -14,8 +14,7 @@ module OpenStackAPIs
     def fetch
       return if @url.empty?
       html_source = fetch_source(@url)
-      api = self.send(@parser, html_source)
-      return(api)
+      return self.send(@parser, html_source)
     end
 
     def fetch_source(url)

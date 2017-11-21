@@ -36,6 +36,12 @@ module OpenStackAPIs
     end
 
     def api_ref(page)
+      tag = ""
+      toc = page.css('div.docs-sidebar-toc').select
+      toc.each do |e|
+        tag = e.css('div.docs-sidebar-section').css('a.docs-sidebar-section-title').css('h4')[0].text
+      end
+
       api = {}
       group = page.css("div.detail-control").select
       group.each do |e|
@@ -60,7 +66,7 @@ module OpenStackAPIs
           api[path] = request
         end
       end
-      api
+      return {tag: tag, api: api}
     end
 
     # For Legacy pages
