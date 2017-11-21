@@ -1,5 +1,5 @@
 ---
-:tag: Metering API Reference Legacy
+:tag: Metering API Legacy
 :api:
   "/v2/resources":
     :GET:

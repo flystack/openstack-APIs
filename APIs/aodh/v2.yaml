@@ -1,5 +1,5 @@
 ---
-:tag: Alarming API Reference Legacy
+:tag: Alarming API Legacy
 :api:
   "/v2/capabilities":
     :GET:
