@@ -1,5 +1,5 @@
 ---
-:tag: Block Storage API Reference Legacy
+:tag: Block Storage API Legacy
 :api:
   "/v1/{admin_tenant_id}/os-quota-sets/{tenant_id}/detail/{user_id}":
     :GET:
