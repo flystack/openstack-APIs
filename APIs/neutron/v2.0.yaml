@@ -1,5 +1,5 @@
 ---
-:tag: Networking API Reference 1.10.1
+:tag: Networking API Reference 1.13.1
 :api:
   "/":
     :GET:
@@ -184,34 +184,34 @@
     - :delete_firewall_group
   "/v2.0/fwaas/firewall_policies":
     :GET:
-    - :id252
+    - :id253
     :POST:
-    - :id260
+    - :id261
   "/v2.0/fwaas/firewall_policies/{firewall_policy_id}":
     :GET:
-    - :id256
+    - :id257
     :PUT:
-    - :id265
+    - :id266
     :DELETE:
-    - :id270
+    - :id271
   "/v2.0/fwaas/firewall_rules":
     :GET:
-    - :id273
+    - :id274
     :POST:
-    - :id281
+    - :id282
   "/v2.0/fwaas/firewall_rules/{firewall_rule_id}":
     :GET:
-    - :id277
+    - :id278
     :PUT:
-    - :id286
+    - :id287
     :DELETE:
-    - :id291
+    - :id292
   "/v2.0/fwaas/firewall_policies/{firewall_policy_id}/insert_rule":
     :PUT:
-    - :id293
+    - :id294
   "/v2.0/fwaas/firewall_policies/{firewall_policy_id}/remove_rule":
     :PUT:
-    - :id298
+    - :id299
   "/v2.0/rbac-policies/{rbac_policy_id}":
     :GET:
     - :show_rbac_policy_details
@@ -597,3 +597,18 @@
   "/v2.0/log/loggable-resources":
     :GET:
     - :list_loggable_resources
+  "/v2.0/agents":
+    :GET:
+    - :list_all_agents
+  "/v2.0/agents/{agent_id}":
+    :GET:
+    - :show_agent_details
+    :PUT:
+    - :update_agent
+    :DELETE:
+    - :delete_agent
+  "/v2.0/auto-allocated-topology/{project_id}":
+    :GET:
+    - :show_auto_allocated_topology_details
+    :DELETE:
+    - :delete_the_auto_allocated_topology

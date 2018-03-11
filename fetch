@@ -21,7 +21,6 @@ until ARGV.empty?
     usage & exit
   end
 end
-
 services = OpenStackAPIs::Services.new(API_REF)
 services.include_only(modules) unless modules.empty?
 services.fetch(BASE)

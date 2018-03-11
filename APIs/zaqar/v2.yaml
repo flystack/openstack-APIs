@@ -1,5 +1,5 @@
 ---
-:tag: Messaging Service API Reference 6.0.0
+:tag: Messaging Service API Reference 6.0.1
 :api:
   "/":
     :GET:

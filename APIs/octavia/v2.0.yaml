@@ -112,10 +112,13 @@
     :PUT:
     - :update_a_quota
     :DELETE:
-    - :remove_a_quota
+    - :reset_a_quota
   "/v2.0/octavia/amphorae":
     :GET:
     - :list_amphora
   "/v2.0/octavia/amphorae/{amphora_id}":
     :GET:
     - :show_amphora_details
+  "/v2.0/octavia/amphorae/{amphora_id}/failover":
+    :PUT:
+    - :failover_amphora

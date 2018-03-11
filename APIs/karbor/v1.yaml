@@ -1,5 +1,5 @@
 ---
-:tag: Data Protection API Reference 0.5.1
+:tag: Data Protection API Reference 1.0.1
 :api:
   "/v1/{tenant_id}/protectables":
     :GET:
