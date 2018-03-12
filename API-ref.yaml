@@ -62,7 +62,7 @@ masakari:
   name: Instance HA
   type: :apiref
   versions:
-    - v1: "https://developer.openstack.org/api-ref/instance-ha/"
+    - v1.0: "https://developer.openstack.org/api-ref/instance-ha/"
 murano:
   name:  Application Catalog
   type: :apiref
