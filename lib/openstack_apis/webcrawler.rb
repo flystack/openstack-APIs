@@ -104,5 +104,26 @@ module OpenStackAPIs
     def elements?(path)
       return true if path =~ /(.*)(\{.*\})(.*)/
     end
+
+    def barbican(page)
+      tag = "Barbican API"
+      api = {}
+      sections = page.css('div.section h2').select
+      sections.each do |section|
+        (verb, path) = section.children[0].text.split(' ')
+        name = section.children[1].attributes["href"].text
+        name.sub!(/^#/,'').gsub!(/-/,'_')
+        name.sub!(/_v1/,'')
+        if api[path]
+          # Add request to existing path
+          puts "merging #{verb.upcase.to_sym} => #{[name.to_sym]}"
+          api[path].merge!(verb.upcase.to_sym => [name.to_sym])
+        else
+          # Add new path with request
+          api.merge!(path => {verb.upcase.to_sym => [name.to_sym]})
+        end
+      end
+      return {tag: tag, api: api}
+    end
   end
 end
