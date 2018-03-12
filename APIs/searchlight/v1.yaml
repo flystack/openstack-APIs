@@ -1,5 +1,5 @@
 ---
-:tag: Search Service API Reference 3.0.1
+:tag: Search Service API Reference 4.0.0
 :api:
   "/v1/search/plugins":
     :GET:

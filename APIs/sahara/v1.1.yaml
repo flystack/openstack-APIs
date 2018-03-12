@@ -1,5 +1,5 @@
 ---
-:tag: Data Processing API Reference 8.0.0
+:tag: Data Processing API Reference 8.0.1
 :api:
   "/v1.1/{project_id}/cluster-templates/{cluster_template_id}":
     :GET:

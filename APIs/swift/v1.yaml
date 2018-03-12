@@ -1,5 +1,5 @@
 ---
-:tag: Object Storage API Reference 2.16.1
+:tag: Object Storage API Reference 2.17.1
 :api:
   "/info":
     :GET:

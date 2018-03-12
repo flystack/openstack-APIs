@@ -1,21 +1,16 @@
 ---
-:tag: Identity API Reference v3.8
+:tag: Identity API Reference v3.10
 :api:
-  "/v2.0/users/{userId}/OS-KSADM/credentials":
+  "/v2.0/ec2tokens":
+    :POST:
+    - :ec2_authentication
+  "/v2.0/users/{userId}/credentials/OS-EC2":
     :POST:
     - :grant_credential_to_user
     :GET:
     - :list_credentials_ec2_extension
-  "/v2.0/users/{userId}/OS-KSADM/credentials/OS-KSEC2:ec2Credentials":
-    :POST:
-    - :update_user_credentials
+  "/v2.0/users/{userId}/credentials/OS-EC2/{credentialId}":
     :DELETE:
     - :delete_user_credentials
     :GET:
     - :get_user_credentials
-  "/v2.0/users/{userId}/OS-KSADM/credentials/OS-KSEC2:ec2Credentials/{type}":
-    :GET:
-    - :list_credentials_by_type
-  "/v2.0/OS-KSCRUD/users/{userId}":
-    :PATCH:
-    - :change_user_s_own_password

@@ -1,5 +1,5 @@
 ---
-:tag: Backup and Disaster Recovery Service API Reference 5.0.1
+:tag: Backup and Disaster Recovery Service API Reference 6.0.1
 :api:
   "/v1/backups":
     :GET:

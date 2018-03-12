@@ -1,5 +1,5 @@
 ---
-:tag: Container Infrastructure Management API Reference 5.0.1
+:tag: Container Infrastructure Management API Reference 6.0.2
 :api:
   "/":
     :GET:

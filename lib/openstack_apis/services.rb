@@ -9,9 +9,12 @@ module OpenStackAPIs
 
       ref = YAML.load_file(file)
       ref.each do |project, details|
-        details["versions"].each do |version|
-          version.each do |version_key, url|
-            @services << OpenStackAPIs::Service.new(project, details["name"], :api_ref,  version_key, url)
+        raise StandardError unless details["type"]
+        if details["disable"].nil? || !details["disable"]
+          details["versions"].each do |version|
+            version.each do |version_key, url|
+              @services << OpenStackAPIs::Service.new(project, details["name"], details["type"],  version_key, url)
+            end
           end
         end
       end

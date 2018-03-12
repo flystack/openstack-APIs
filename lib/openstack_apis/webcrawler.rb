@@ -35,7 +35,7 @@ module OpenStackAPIs
       end
     end
 
-    def api_ref(page)
+    def apiref(page)
       tag = ""
       toc = page.css('div.docs-sidebar-toc').select
       toc.each do |e|
@@ -70,7 +70,8 @@ module OpenStackAPIs
     end
 
     # For Legacy pages
-    def api_web(page)
+    def webapi(page)
+      tag = "Web API"
       list = []
       group = page.css("div.section").select
       group.each do |section|
@@ -97,7 +98,7 @@ module OpenStackAPIs
           api.merge!(path => {verb.upcase.to_sym => [add_method_name(verb, path).to_sym]})
         end
       end
-      api
+      return {tag: tag, api: api}
     end
 
     def elements?(path)

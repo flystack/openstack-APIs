@@ -285,7 +285,7 @@
     - :list_migrations
   "/servers/{server_id}/migrations":
     :GET:
-    - :id321
+    - :id327
   "/servers/{server_id}/migrations/{migration_id}":
     :GET:
     - :show_migration_details
