@@ -46,7 +46,7 @@
   "/v2.0/notification-methods/types/":
     :GET:
     - :list_supported_notification_method_types
-  "/v2.0/alarm-definitions"
+  "/v2.0/alarm-definitions":
     :POST:
     - :create_alarm_definition
   "/v2.0/alarm-definitions":
