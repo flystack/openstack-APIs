@@ -87,7 +87,7 @@ placement:
   name: Placement
   type: :apiref
   versions:
-    - v1: "https://developer.openstack.org/api-ref/placement/"
+    - v2.1: "https://developer.openstack.org/api-ref/placement/"
 sahara:
   name: Data Processing
   type: :apiref
